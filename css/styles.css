@@ -1,64 +1,178 @@
-/*color pallet link
---------------------------
-https://coolors.co/ff9f1c-ffbf69-ffffff-e0ebe8-45b29a
-
-#ff9f1c
-#ffbf69
-#ffffff
-#e0ebe8
-#45b29a
-
-*/
-/*-----------------------------
-        General Styles
------------------------------*/
+/*  General Styles
+-------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap");
 body {
   margin: 0;
   text-align: center;
   font-family: "Merriweather", serif;
+  color: #40514e;
 }
 h1 {
   font-family: "Sacramento", cursive;
+  font-size: 5.625rem;
+  margin: 0;
+  text-transform: capitalize;
+  color: #66bfbf;
+  line-height: 2;
 }
 h2,
-h3 {
-  font-family: "Montserrat", sans-serif;
-}
-
-/*-----------------------------
-        Header Styles
------------------------------*/
-.top-container {
-  background-color: #def7f6;
-  position: relative;
-  padding-top: 100px;
-}
-.top-container h1 {
-  font-size: 5.625rem;
-  margin: 1rem auto 0 auto;
-}
-.top-container h2 {
+header p {
+  color: #66bfbf;
+  font-weight: normal;
   font-size: 2.5rem;
-  margin: 1rem auto;
 }
-.top-container h2 span {
+h3,
+a {
+  color: #11999e;
+}
+h2,
+h3,
+header p {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+hr {
+  border: none;
+  border-bottom: 7px dotted #999;
+  width: 4%;
+}
+/*  Header Styles
+-------------------*/
+header {
+  padding-top: 100px;
+  background-color: #eaf6f6;
+  position: relative;
+}
+header p {
+  margin: 1rem auto 0;
+}
+header p span {
   text-decoration: underline;
 }
-.top-cloud,
-.bottom-cloud {
+header .cloud {
   position: absolute;
-  width: auto;
 }
 .top-cloud {
   top: 30px;
-  right: 34%;
+  right: 30%;
 }
 .bottom-cloud {
-  bottom: 300px;
+  top: 400px;
   left: 30%;
 }
-
-.profile img {
-  width: 300px;
+.mountain {
+  width: 100%;
+}
+/*  Intro Styles
+-------------------*/
+.intro {
+  padding: 3rem 0;
+  width: 50%;
+  margin: 0 auto;
+}
+.intro img {
+  width: 30%;
   border-radius: 100%;
+}
+.intro p {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+/*  Skills Styles
+-------------------*/
+.skills {
+  padding: 3rem 0;
+}
+.skill_row {
+  width: 50%;
+  margin: 6.25rem auto;
+  text-align: left;
+  overflow: hidden;
+}
+.skill_row img {
+  width: 30%;
+  border-radius: 100%;
+}
+.skill_row .webDesignImg {
+  float: left;
+  margin-right: 2rem;
+}
+.skill_row .webDevelopImg {
+  float: right;
+  margin-left: 2rem;
+}
+.skill_row p {
+  line-height: 2;
+}
+
+/*  Footer Styles
+-------------------*/
+.upperFooter {
+  padding: 3rem 0;
+}
+.contactMe {
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid #11999e;
+  color: #11999e;
+  display: inline-block;
+  margin: 2rem auto;
+  border-radius: 5px;
+}
+.contactMe:hover {
+  background-color: #11999e;
+  color: #fff;
+  animation: none;
+}
+.bouncy {
+  animation: bouncy 5s infinite linear;
+  position: relative;
+}
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+footer .contactInfo {
+  background-color: #66bfbf;
+  padding: 3rem 0;
+}
+footer .contactInfo p {
+  margin: 0;
+  color: #eaf6f6;
+}
+.links {
+  margin-bottom: 1rem;
+}
+.links a {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  font-size: 2.5rem;
+}
+
+@media (min-width: 720px) {
+  img.mountain {
+    width: 50%;
+  }
 }
