@@ -4,56 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abanoub Mokhles - a web developer</title>
-    <script src="https://kit.fontawesome.com/d3192403f3.js" crossorigin="anonymous"></script>
+    <meta name="description" content="abanoub mokhles personal site">
+    <meta name="keywords" content="personal site, abanoub mokhles, web developer">
+    <title>Abanoub Mokhles</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/d3192403f3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header -->
     <header role="banner">
-        <img class="cloud top-cloud"src="images/cloud.png" alt="cloud-image">
-        <h1>i'm abanoub</h1>
-        <p>a <span>pro</span>grammer</p>
-        <img class="cloud bottom-cloud"src="images/cloud.png" alt="cloud-image">
-        <img class="mountain"src="images/mountain.png" alt="cloud-image">
+        <div class="header_box">
+            <img class="cloud top" src="images/cloud.png" alt="cloud image">
+            <h1>I'm Abanoub</h1>
+            <p>A <span class="pro">Pro</span>grammer</p>
+            <img class="cloud bottom" src="images/cloud.png" alt="cloud image">
+            <img class="mountain" src="images/mountain.png" alt="mountain image">
+        </div>
     </header>
     <main role="main">
+        <!-- Intro -->
         <section class="intro">
-            <img src="images/abanoub.jpg" alt="abanoub-profile-image">
+            <div class="container">
+            <img src="images/abanoub.jpg" alt="abanoub mokhles profile image">
             <h2>Hello</h2>
             <p>i'm abanoub a web designer and developer located in egypt, i 🖤 programming, video games, and coffee.</p>
+            </div>
         </section>
         <hr>
+
+        <!-- Skills -->
         <section class="skills">
-            <h2>My Skills</h2>
-            <div class="skill_row">
-                <img class="webDesignImg" src="images/front-end.jpg" alt="web design book">
-                <h3>Web Design</h3>
+            <div class="container">
+            <h2>my skills</h2>
+            <div class="skill">
+                <img class="front-end" src="images/front-end.jpg" alt="books-image">
+                <h3>web design</h3>
                 <p>i love making beautiful websites that attract users, i use my skills in color theory, typography, user experience, and user interface to make them look so good.</p>
             </div>
-            <div class="skill_row">
-                <img class="webDevelopImg" src="images/back-end.jpg" alt="web design book">
-                <h3>Web Development</h3>
+            <div class="skill">
+                <img class="back-end" src="images/back-end.jpg" alt="code-image">
+                <h3>web development</h3>
                 <p>i use my back-end skills to make a fully-functional websites like e-commerce sites, i like javascript it's so powerful and you can use it in both front-wnd and back-end web developement.</p>
+            </div>
             </div>
         </section>
         <hr>
-    </main>
-    <footer role="complementary">
-        <div class="upperFooter">
+
+        <!-- Contact -->
+        <section class="contact">
+            <div class="container">
             <h2>Get In Touch</h2>
-            <h3>do you have an amazing project in mind?</h3>
+            <h3>Do You Have An Amazing Project In Mind?</h3>
             <p>lets schedule a zoom meeting and discuss how to make it alive.</p>
-            <a class="contactMe bouncy" href="contact.html">Contact Me</a>
-        </div>
-        <div class="contactInfo">
-            <div class="links">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-solid fa-g"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="btn">contact me</a>
             </div>
-            <p><small>&copy; 2022 made with 🤍 by Abanoub Mokhles</small></p>
-        </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-g"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <p><small>&copy; Copyright 2022 by Abanoub Mokhles.</small></p>
     </footer>
 </body>
 </html>

@@ -1,118 +1,125 @@
 /*  General Styles
 -------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap");
+
 body {
+  font-family: "Merriweather", serif;
   margin: 0;
   text-align: center;
-  font-family: "Merriweather", serif;
   color: #40514e;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  text-transform: capitalize;
 }
 h1 {
   font-family: "Sacramento", cursive;
-  font-size: 5.625rem;
-  margin: 0;
-  text-transform: capitalize;
-  color: #66bfbf;
-  line-height: 2;
+  font-weight: bold;
 }
-h2,
-header p {
-  color: #66bfbf;
-  font-weight: normal;
+h2 {
   font-size: 2.5rem;
+  color: #66bfbf;
 }
-h3,
-a {
+h3 {
   color: #11999e;
+  font-weight: bold;
 }
-h2,
-h3,
-header p {
-  font-family: "Montserrat", sans-serif;
-  text-transform: capitalize;
+p {
+  line-height: 2;
 }
 hr {
   border: none;
-  border-bottom: 7px dotted #999;
-  width: 4%;
+  border-bottom: 3px dotted #ddd;
+  width: 5%;
 }
+.container {
+  margin: 0 auto;
+  max-width: 50%;
+  padding: 7% 0;
+}
+
 /*  Header Styles
 -------------------*/
 header {
-  padding-top: 100px;
   background-color: #eaf6f6;
+  color: #66bfbf;
+  padding-top: 10rem;
   position: relative;
-}
-header p {
-  margin: 1rem auto 0;
-}
-header p span {
-  text-decoration: underline;
 }
 header .cloud {
   position: absolute;
+  animation: slowMove 20s linear infinite alternate;
 }
-.top-cloud {
-  top: 30px;
-  right: 30%;
+.cloud.top {
+  top: 9%;
+  right: 26%;
 }
-.bottom-cloud {
-  top: 400px;
+.cloud.botoom {
+  top: 70%;
   left: 30%;
 }
 .mountain {
-  width: 100%;
+  width: 50%;
+}
+header h1 {
+  font-size: 5rem;
+  margin: 0.5rem;
+}
+header p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+header .pro {
+  text-decoration: underline;
+}
+@keyframes slowMove {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(100px);
+  }
 }
 /*  Intro Styles
--------------------*/
-.intro {
-  padding: 3rem 0;
-  width: 50%;
-  margin: 0 auto;
-}
+-------------------------*/
 .intro img {
   width: 30%;
   border-radius: 100%;
 }
 .intro p {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
-  line-height: 2;
 }
 
 /*  Skills Styles
--------------------*/
-.skills {
-  padding: 3rem 0;
-}
-.skill_row {
-  width: 50%;
-  margin: 6.25rem auto;
+-------------------------*/
+.skill {
   text-align: left;
+  margin: 6rem 0;
   overflow: hidden;
 }
-.skill_row img {
+.skill img {
   width: 30%;
   border-radius: 100%;
 }
-.skill_row .webDesignImg {
+.front-end {
   float: left;
   margin-right: 2rem;
 }
-.skill_row .webDevelopImg {
+.back-end {
   float: right;
   margin-left: 2rem;
 }
-.skill_row p {
-  line-height: 2;
-}
 
-/*  Footer Styles
--------------------*/
-.upperFooter {
-  padding: 3rem 0;
-}
-.contactMe {
+/*  contact Styles
+-------------------------*/
+.contact .btn {
   text-decoration: none;
   padding: 1rem;
   border: 1px solid #11999e;
@@ -120,15 +127,16 @@ header .cloud {
   display: inline-block;
   margin: 2rem auto;
   border-radius: 5px;
+  animation: bouncy 5s infinite linear;
+  position: relative;
+  text-transform: capitalize;
+  transition: 0.5s ease;
 }
-.contactMe:hover {
+.contact .btn:hover {
+  border: 1px solid #fff;
   background-color: #11999e;
   color: #fff;
   animation: none;
-}
-.bouncy {
-  animation: bouncy 5s infinite linear;
-  position: relative;
 }
 @keyframes bouncy {
   0% {
@@ -140,6 +148,7 @@ header .cloud {
   43% {
     top: -0.9em;
   }
+
   46% {
     top: 0em;
   }
@@ -153,26 +162,56 @@ header .cloud {
     top: 0em;
   }
 }
-footer .contactInfo {
+
+/*  Footer Styles
+-------------------------*/
+footer {
   background-color: #66bfbf;
+  color: #ddd;
   padding: 3rem 0;
 }
-footer .contactInfo p {
-  margin: 0;
-  color: #eaf6f6;
-}
-.links {
-  margin-bottom: 1rem;
-}
-.links a {
+footer a {
+  color: #ddd;
   display: inline-block;
+  font-size: 2rem;
   padding: 5px;
   margin: 5px;
-  font-size: 2.5rem;
 }
 
-@media (min-width: 720px) {
-  img.mountain {
-    width: 50%;
+/*  Responsive Styles
+-------------------------*/
+@media screen and (max-width: 720px) {
+  .container {
+    max-width: 70%;
+  }
+  .mountain {
+    width: 100%;
+  }
+  header h1 {
+    font-size: 3rem;
+  }
+  header p {
+    font-size: 1.5rem;
+  }
+  .intro img {
+    width: 70%;
+  }
+  .intro p {
+    width: 100%;
+  }
+  .skill {
+    text-align: center;
+    margin: 4rem 0;
+  }
+  .skill img {
+    width: 70%;
+  }
+  .skill .front-end {
+    float: none;
+    margin-right: 0;
+  }
+  .skill .back-end {
+    float: none;
+    margin-left: 0;
   }
 }
