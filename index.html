@@ -67,7 +67,10 @@
         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         <a href="#"><i class="fa-brands fa-g"></i></a>
         <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <p><small>&copy; Copyright 2022 by Abanoub Mokhles.</small></p>
+        <p><small>&copy; Copyright <span id="year">Year</span> by Abanoub Mokhles.</small></p>
     </footer>
+    <script>
+        document.querySelector("#year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>
