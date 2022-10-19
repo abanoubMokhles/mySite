@@ -1,3 +1,3 @@
 # CSS - My Site
-##### HTML, CSS Personal site
+##### First try of HTML, CSS to build a Personal site
 ![CSS - My Site on desktop](/desktop_version.png)
